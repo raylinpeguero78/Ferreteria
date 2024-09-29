@@ -1,0 +1,635 @@
+*{
+    margin: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+ list-style-type: none;
+ list-style: none;
+}
+
+body{
+        
+}
+.nav__list{
+    color: rgb(240, 255, 240);
+    
+        background-color: #255802;
+ 
+    
+    border-radius: 8px;
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+    
+    
+    
+    
+       
+    }
+    
+    .nav__ul{
+        text-align: center;
+        list-style-type: none;
+        list-style: none;
+text-decoration: none;
+         
+    
+    }
+    .nav__ul .item{
+        text-decoration: none;
+    }
+
+
+    .item{
+        display: inline-block;
+    padding :10px;
+    margin: 20px;
+    color: #4baa0c;
+        
+    font-size: 20px;
+    font-family: Fantasy;/* Puedes cambiar la fuente aquí */
+    box-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000; /* Efecto 3D */
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000; /* Efecto 3D */
+    
+    transition: all 0.2s ease-in-out; 
+     background-color: black;
+     width: 10%;
+     filter: drop-shadow(10px 5px 5px rgb(11, 11, 11));
+     text-decoration: none;
+    list-style-type: none;
+    }
+    .item a{
+        color: rgb(21, 197, 5);
+        text-decoration: none;
+        list-style-type: none;
+        list-style: none;
+    
+      
+     
+    }
+    
+    .item a:hover{
+        text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000; /* Efecto 3D */
+    
+    }
+    .imagen-original {
+        
+        width:100%;
+        max-height: 1500%;
+        position: relative;
+        
+         /* Ajusta el tamaño máximo si es necesario */
+         margin: auto;
+         
+        
+         
+    }
+
+    .imagen-original img {
+       
+        height: auto;
+        
+    }
+
+    
+    .fa-solid{
+        color: aliceblue;
+        font-size: 24px;
+        cursor: pointer;
+       display: none;
+       float: right;
+       padding: 7px 24px;
+       visibility: hidden;
+       
+        
+    }
+
+   /* Base para todas las herramientas */
+.line {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: gray;
+    animation: rayli 5s infinite;
+}
+
+/* Destornillador */
+.destornillador {
+    width: 10px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+.destornillador::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    background-color: silver;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Forma triangular */
+}
+
+/* Martillo */
+.martillo {
+    width: 15px;
+    height: 60px;
+    background-color: brown;
+    position: relative;
+}
+
+.martillo::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    width: 50px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+/* Alicate */
+.alicate {
+    width: 10px;
+    height: 80px;
+    background-color: #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+.alicate::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    width: 50px;
+    height: 30px;
+    background-color: #555;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Animaciones */
+@keyframes rayli {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    50% {
+        opacity: 0.8;
+        filter: drop-shadow(0 0 10px rgb(22, 22, 22));
+        transform: translateY(50vh); /* Ajusta este valor según la altura del contenedor */
+    }
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 10px rgb(3, 200, 26));
+        transform: translateY(100vh); /* Ajusta este valor según la altura del contenedor */
+    }
+}
+
+
+
+/* Continúa para más herramientas */
+
+/* Contenedor */
+.linea {
+    position: relative;
+    width: 100%;
+    height: 98vh;
+    overflow: hidden;
+}
+
+/* Tuerca con agujero */
+.line {
+    width: 50px; /* Tamaño ajustable */
+    height: 50px;
+    background-color: rgb(128, 128, 128);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* Hexágono */
+    position: absolute;
+    animation: rayli 8s infinite; /* Duración de la animación ajustada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Agujero en el centro de la tuerca */
+.line::before {
+    content: '';
+    width: 20px; /* Tamaño del agujero */
+    height: 20px;
+    background-color: rgb(14, 14, 14); /* Color del agujero */
+    border-radius: 50%; /* Hace que sea un círculo */
+}
+
+.line:nth-child(1) {
+    top: -10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.line:nth-child(2) {
+    top: -20%;
+    left: 30%;
+    animation-delay: 0.2s;
+}
+
+.line:nth-child(3) {
+    top: -30%;
+    left: 50%;
+    animation-delay: 0.4s;
+}
+
+.line:nth-child(4) {
+    top: -40%;
+    left: 70%;
+    animation-delay: 0.6s;
+}
+
+.line:nth-child(5) {
+    top: -50%;
+    left: 90%;
+    animation-delay: 0.8s;
+}
+
+.line:nth-child(6) {
+    top: -60%;
+    left: 20%;
+    animation-delay: 1s; /* Tiempo ajustado */
+    animation-duration: 8s; /* Duración ajustada */
+}
+
+.line:nth-child(7) {
+    top: -70%;
+    left: 40%;
+    animation-delay: 1.2s; /* Tiempo ajustado */
+    animation-duration: 8s; /* Duración ajustada */
+}
+
+.line:nth-child(8) {
+    top: -80%;
+    left: 60%;
+    animation-delay: 1.4s; /* Tiempo ajustado */
+    animation-duration: 8s; /* Duración ajustada */
+}
+
+.line:nth-child(9) {
+    top: -90%;
+    left: 80%;
+    animation-delay: 1.6s; /* Tiempo ajustado */
+    animation-duration: 8s; /* Duración ajustada */
+}
+
+@keyframes rayli {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    50% {
+        opacity: 0.8;
+        filter: drop-shadow(0 0 10px rgb(22, 22, 22));
+        transform: translateY(50vh);
+    }
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 10px rgb(3, 200, 26));
+        transform: translateY(100vh);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .Herramientas{
+        text-align: center;
+        font-family: fantasy;
+        color: #255802;
+        font-size: 50px;
+    }
+
+
+    .container .producto img{
+        width: 10%;
+    }
+
+
+
+
+
+    .testimonio{
+        background-color: rgb(19, 18, 18);
+    width: 70%;
+    margin: auto;
+    padding-bottom:60px ;
+    }
+    .estrella-una{
+        background-color: yellow;
+        margin: 5px;
+        float: right;
+        
+        
+    
+    }
+    .estrella{
+        cursor: pointer;
+        transition: color 0.3s;
+    color: #dbd403;
+    
+        
+    
+    }
+    .estrella:hover{
+        background-color: #e90e0e;
+        border-radius: 30px;
+    }
+    .testimonio-p{
+        color: #fff;
+        width: 100%;
+    
+    }
+    
+    .opinion {
+        text-align: center;
+        color: rgb(14, 102, 18);
+        text-shadow: 
+            1px 1px 0 #000, 
+            2px 2px 0 #000, 
+            3px 3px 0 #000, 
+            4px 4px 0 #000; /* Efecto 3D */
+        font-size: 40px;
+        font-family: fantasy;
+        background-color: #000;
+        border-radius: 50px;
+        content: '';
+        width: 70%;
+        height: 70%;
+       
+        background: #131212;
+        border-radius: inherit;
+        transform: translate3d(0, 0.5em, -1em);
+        transition: transform 0.3s cubic-bezier(0,0,0.58,1);
+        filter: drop-shadow(10px 5px 5px rgb(11, 11, 11));
+        margin: auto;
+       
+    }
+    
+    .testimonio img{
+        border-radius: 50%;
+        width: 15%;
+
+
+
+
+
+
+
+    
+
+
+
+    }
+
+    .gorra-h2{
+     font-size: larger;
+     color: #4baa0c;
+     font-family: fantasy;
+
+
+    }
+
+
+
+    .container-footer {
+        background: #161515;
+    
+        color: #fff;
+       width: 100%;
+        position: relative;
+        text-align: center;
+        height: 70vh;
+        display: inline-block;
+    
+        top: 140px;
+      
+    }
+    .imagen-footer{
+        width: 20%;
+        filter: drop-shadow(0 0 30px rgba(249, 246, 246, 0.8));
+    
+    
+    
+    }
+    .footer-item{
+    
+    }
+    .footer-small{
+    filter: drop-shadow(0 0 10px rgb(0, 233, 85));
+    
+        margin-bottom: -140px;
+        font-size: 16px;
+        position: relative;
+        top: 50px;
+      
+    
+        
+    }
+    
+    
+    .footer-ul li{
+        text-decoration: none;
+        list-style: none;
+        list-style-type: none;
+        display: inline-block;
+        font-size: 30px;
+        margin: 20px;
+    
+    }
+    
+    .fa-brands{
+        font-size: 48px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background: linear-gradient(-135deg, rgb(45, 109, 3));
+        color: rgb(241, 245, 243);
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(2, 69, 13, 0.5);
+        transition: all .4s ease-in-out;
+        animation-delay: 2s;
+        animation: float 5s ease-in-out infinite;
+    
+    }
+    
+    
+    .fa-brands:hover {
+        transform: scale(1.2);
+      } 
+    
+    
+      @keyframes float{
+        0%{
+            transform: translateY(0px);
+    
+        }
+        50%{
+            transform: translateY(-15px);
+        }
+    
+        100%{
+            transform: translateY(0);
+        }
+    }
+    
+    
+figure{
+    font-size: 70px;
+}    
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-gap: 10px; /* Espaciado entre productos */
+}
+
+
+
+.producto {
+    width: 100%;
+    background-color: #ffffff; /* Fondo amarillo */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 50px 50px #757676;
+    position: relative;
+}
+
+.producto img {
+    width: 250rem;
+  
+    margin-bottom: 15px;
+}
+
+.producto h2 {
+    font-size: 18px;
+    color: rgb(7, 83, 5);
+    margin: 10px 0;
+}
+
+.producto  .texto {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media only screen and (max-width: 500px) {
+        .nav__list .nav__ul {
+            background-color: #000000;
+          
+    
+           
+    
+        }
+        .nav__list .nav__ul.active {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 35px ;
+    
+            display: none;
+            background-color: #171817;
+            
+    
+        }
+        .nav__list .nav__ul .item {
+            padding: 20px;
+            width: 78%;
+            filter: drop-shadow(0 0 10px rgb(24, 146, 13));
+            
+        }
+        .fa-solid {
+            display: block;
+            padding: 16px 24px;
+            position: relative;
+            top: 10px;
+            right: 10px;
+            visibility: visible;
+            font-size: 35px;
+            z-index: 1;
+        }
+
+    }
+
+    @media only screen and (max-width: 500px) {
+
+        .container{
+            display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Tres columnas iguales */
+    grid-gap: 10px; 
+        
+
+        }
+        .producto{
+            width: 97%;
+            background-color: #ffffff; /* Fondo amarillo */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 50px 50px #757676;
+            position: relative;
+           
+        }
+        .texto{
+            font-family: fantasy;
+            font-size: 10px;
+            color: #000;
+        }
+
+
+    }
